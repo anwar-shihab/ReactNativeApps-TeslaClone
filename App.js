@@ -1,13 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
+// import CarItem from './components/carItem';
+import CarsList from './components/carsList';
+import Header from './components/Header';
 
 export default function App() {
+
+  console.log("Successful")
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={styles.container}>
+      <Header />
+      <CarsList />
       <StatusBar style="auto" />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -18,4 +24,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
